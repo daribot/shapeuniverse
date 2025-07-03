@@ -35,7 +35,7 @@ size = Vector2(86, 80)
 [node name="Jugador" parent="." instance=ExtResource("4_v8kj3")]
 position = Vector2(167, 227)
 gravity = 350
-speed = 201
+speed = 800
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
 position = Vector2(574, 326)
@@ -94,6 +94,16 @@ position = Vector2(1257, -128)
 texture = ExtResource("15_3l65w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D2"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Plats"]
+position = Vector2(2932, -224)
+
+[node name="GroundGrass" type="Sprite2D" parent="Plats/StaticBody2D5"]
+texture = ExtResource("15_3l65w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D5"]
 position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_eqrsh")
 
@@ -184,3 +194,7 @@ texture = ExtResource("1_usj0q")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/Bloque!"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_usj0q")
+
+[node name="BgLayer5" type="Sprite2D" parent="."]
+position = Vector2(5078, 244)
+texture = ExtResource("12_hx44q")
