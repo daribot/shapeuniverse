@@ -55,22 +55,6 @@ drag_left_margin = 0.0
 script = ExtResource("10_5j5gb")
 object_to_follow = NodePath("../Jugador")
 
-[node name="BgLayer1" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(601, 41)
-scale = Vector2(23.8467, 1)
-texture = ExtResource("11_mx85b")
-
-[node name="BgLayer3" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(1018, 252)
-texture = ExtResource("12_hx44q")
-
-[node name="BgLayer4" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(3062, 247)
-texture = ExtResource("12_hx44q")
-
 [node name="Plats" type="StaticBody2D" parent="."]
 position = Vector2(1275, 534)
 
@@ -210,6 +194,24 @@ texture = ExtResource("18_beq0j")
 position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_nauge")
 
-[node name="BgLayer5" type="Sprite2D" parent="."]
-position = Vector2(5078, 244)
+[node name="Fondo" type="StaticBody2D" parent="."]
+position = Vector2(5107, 246)
+
+[node name="BgLayer1" type="Sprite2D" parent="Fondo"]
+z_index = -5
+position = Vector2(-4506, -205)
+scale = Vector2(23.8467, 1)
+texture = ExtResource("11_mx85b")
+
+[node name="BgLayer4" type="Sprite2D" parent="Fondo"]
+z_index = -5
+position = Vector2(-2045, 1)
+texture = ExtResource("12_hx44q")
+
+[node name="BgLayer3" type="Sprite2D" parent="Fondo"]
+z_index = -1
+position = Vector2(-4089, 6)
+texture = ExtResource("12_hx44q")
+
+[node name="BgLayer5" type="Sprite2D" parent="Fondo"]
 texture = ExtResource("12_hx44q")
