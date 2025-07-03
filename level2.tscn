@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ccisekm71mjhk" path="res://assets/kenney_shape-characters/PNG/Default/tile_exclamation.png" id="1_r8rrl"]
 [ext_resource type="PackedScene" uid="uid://cxpedgr2j6215" path="res://characters/player2.tscn" id="2_lwvnx"]
 [ext_resource type="PackedScene" uid="uid://c42qocx3e1ff1" path="res://characters/player.tscn" id="3_4ou0f"]
-[ext_resource type="Script" uid="uid://bpkdqma4mmpnl" path="res://camera.gd" id="10_7mylh"]
+[ext_resource type="Script" uid="uid://bpkdqma4mmpnl" path="res://characters/camera.gd" id="10_7mylh"]
 [ext_resource type="PackedScene" path="res://platform.tscn" id="10_jifot"]
 [ext_resource type="Texture2D" uid="uid://c7p7e27t138j1" path="res://assets/kenney_jumper-pack/PNG/Background/bg_layer1.png" id="11_3k4dh"]
 [ext_resource type="Texture2D" uid="uid://bftcmyfnomye4" path="res://assets/kenney_jumper-pack/PNG/Background/bg_layer3.png" id="12_idpoe"]

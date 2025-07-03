@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d02gluwx8elvk" path="res://assets/kenney_shape-characters/PNG/Default/tile_grey.png" id="6_xy4tn"]
 [ext_resource type="Texture2D" uid="uid://0nwxixteeq4u" path="res://assets/kenney_shape-characters/PNG/Default/tile_ramp_left.png" id="7_usj0q"]
 [ext_resource type="Texture2D" uid="uid://bk2wfdon5lhsw" path="res://assets/kenney_shape-characters/PNG/Default/tile_ramp_right.png" id="8_5j5gb"]
-[ext_resource type="Script" uid="uid://bpkdqma4mmpnl" path="res://camera.gd" id="10_5j5gb"]
+[ext_resource type="Script" uid="uid://bpkdqma4mmpnl" path="res://characters/camera.gd" id="10_5j5gb"]
 [ext_resource type="Texture2D" uid="uid://c7p7e27t138j1" path="res://assets/kenney_jumper-pack/PNG/Background/bg_layer1.png" id="11_mx85b"]
 [ext_resource type="Texture2D" uid="uid://bftcmyfnomye4" path="res://assets/kenney_jumper-pack/PNG/Background/bg_layer3.png" id="12_hx44q"]
 [ext_resource type="Texture2D" uid="uid://dnrq3xcvqwk0s" path="res://assets/kenney_jumper-pack/PNG/Environment/ground_grass.png" id="13_n8vhr"]
