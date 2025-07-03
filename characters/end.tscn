@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d5eqtgoqsu0o"]
+
+[ext_resource type="Script" uid="uid://c18bj5rbrb5q8" path="res://characters/area.gd" id="1_qy66t"]
+[ext_resource type="Texture2D" uid="uid://dnqedv46yj3rb" path="res://assets/kenney_jumper-pack/PNG/Environment/cactus.png" id="2_g0na3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4u1s2"]
+size = Vector2(114, 163)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_qy66t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_4u1s2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_g0na3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,199 @@
+[gd_scene load_steps=22 format=3 uid="uid://blucwj40rr05u"]
+
+[ext_resource type="PackedScene" uid="uid://c42qocx3e1ff1" path="res://characters/player.tscn" id="1_4k5bj"]
+[ext_resource type="Script" uid="uid://bpkdqma4mmpnl" path="res://characters/camera.gd" id="2_hp87d"]
+[ext_resource type="Texture2D" uid="uid://f7kp8013cm2a" path="res://assets/kenney_jumper-pack/PNG/Environment/ground_grass_broken.png" id="4_2x2vu"]
+[ext_resource type="Texture2D" uid="uid://c1kvfpbdc6t85" path="res://assets/kenney_jumper-pack/PNG/Environment/ground_stone.png" id="5_f8ci1"]
+[ext_resource type="Texture2D" uid="uid://coljfhvghpshk" path="res://assets/kenney_shape-characters/PNG/Default/tile_half_left.png" id="6_iakae"]
+[ext_resource type="Texture2D" uid="uid://k0c531t8frb8" path="res://assets/kenney_shape-characters/PNG/Default/tile_half_center.png" id="7_7mylh"]
+[ext_resource type="Texture2D" uid="uid://cmg2pj2xdkp26" path="res://assets/kenney_shape-characters/PNG/Default/tile_half_right.png" id="8_3k4dh"]
+[ext_resource type="Texture2D" uid="uid://ce0wff7ec374f" path="res://assets/kenney_shape-characters/PNG/Default/tile_right.png" id="9_idpoe"]
+[ext_resource type="Texture2D" uid="uid://c5tcxddstdduo" path="res://assets/kenney_shape-characters/PNG/Default/tile_left.png" id="10_ggudo"]
+[ext_resource type="Texture2D" uid="uid://dhpmsjcf1iv2" path="res://assets/kenney_shape-characters/PNG/Default/tile_center.png" id="11_y2jff"]
+[ext_resource type="Texture2D" uid="uid://bjmpqahdpqiaq" path="res://assets/kenney_jumper-pack/PNG/Environment/ground_snow.png" id="12_r8rrl"]
+[ext_resource type="Texture2D" uid="uid://6dvc76joylw1" path="res://assets/kenney_jumper-pack/PNG/Environment/ground_sand_small.png" id="13_r8rrl"]
+[ext_resource type="Texture2D" uid="uid://dl17sar55saw4" path="res://assets/kenney_jumper-pack/PNG/Environment/ground_wood.png" id="16_lh3ue"]
+[ext_resource type="Texture2D" uid="uid://c7p7e27t138j1" path="res://assets/kenney_jumper-pack/PNG/Background/bg_layer1.png" id="17_nv8dg"]
+[ext_resource type="Texture2D" uid="uid://bftcmyfnomye4" path="res://assets/kenney_jumper-pack/PNG/Background/bg_layer3.png" id="18_wooj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqrsh"]
+size = Vector2(380, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycv2e"]
+size = Vector2(268, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crycw"]
+size = Vector2(234.5, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwvnx"]
+size = Vector2(379, 106)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nauge"]
+size = Vector2(364, 89)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ou0f"]
+size = Vector2(186, 103)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Jugador" parent="." instance=ExtResource("1_4k5bj")]
+position = Vector2(167, 227)
+gravity = 200
+speed = 250
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
+position = Vector2(574, 326)
+limit_left = 0
+limit_top = 0
+limit_bottom = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+rotation_smoothing_speed = 1000.0
+drag_horizontal_enabled = true
+drag_horizontal_offset = -1.0
+drag_left_margin = 0.0
+script = ExtResource("2_hp87d")
+object_to_follow = NodePath("../Jugador")
+
+[node name="Plats" type="StaticBody2D" parent="."]
+position = Vector2(1275, 534)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Plats"]
+position = Vector2(598, -94)
+
+[node name="GroundGrass" type="Sprite2D" parent="Plats/StaticBody2D"]
+texture = ExtResource("4_2x2vu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Plats"]
+position = Vector2(1257, -128)
+
+[node name="GroundGrass" type="Sprite2D" parent="Plats/StaticBody2D2"]
+texture = ExtResource("5_f8ci1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D2"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Plats"]
+position = Vector2(2932, -224)
+
+[node name="GroundGrass" type="Sprite2D" parent="Plats/StaticBody2D5"]
+texture = ExtResource("5_f8ci1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D5"]
+position = Vector2(1, -1)
+shape = SubResource("RectangleShape2D_eqrsh")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Plats"]
+position = Vector2(1887, -82)
+scale = Vector2(1, 1.74119)
+
+[node name="TileHalfLeft" type="Sprite2D" parent="Plats/StaticBody2D3"]
+position = Vector2(-189, 0)
+texture = ExtResource("6_iakae")
+
+[node name="TileHalfCenter" type="Sprite2D" parent="Plats/StaticBody2D3"]
+position = Vector2(-117, 0)
+scale = Vector2(2.08, 1)
+texture = ExtResource("7_7mylh")
+
+[node name="TileHalfRight" type="Sprite2D" parent="Plats/StaticBody2D3"]
+texture = ExtResource("8_3k4dh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D3"]
+position = Vector2(-94, 0)
+shape = SubResource("RectangleShape2D_ycv2e")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Plats"]
+position = Vector2(2417, -132)
+scale = Vector2(1, 1.74119)
+
+[node name="TileHalfLeft" type="Sprite2D" parent="Plats/StaticBody2D4"]
+position = Vector2(-189, 0)
+texture = ExtResource("6_iakae")
+
+[node name="TileHalfCenter" type="Sprite2D" parent="Plats/StaticBody2D4"]
+position = Vector2(-117, 0)
+scale = Vector2(2.08, 1)
+texture = ExtResource("7_7mylh")
+
+[node name="TileHalfRight" type="Sprite2D" parent="Plats/StaticBody2D4"]
+texture = ExtResource("8_3k4dh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D4"]
+position = Vector2(-94, 0)
+shape = SubResource("RectangleShape2D_ycv2e")
+
+[node name="PrimeraPlat" type="StaticBody2D" parent="Plats"]
+position = Vector2(-1220, -565)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/PrimeraPlat"]
+position = Vector2(120.75, 603)
+shape = SubResource("RectangleShape2D_crycw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Plats/PrimeraPlat"]
+position = Vector2(200, 608)
+texture = ExtResource("9_idpoe")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Plats/PrimeraPlat"]
+position = Vector2(42, 608)
+texture = ExtResource("10_ggudo")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Plats/PrimeraPlat"]
+position = Vector2(120, 608)
+texture = ExtResource("11_y2jff")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Plats"]
+position = Vector2(-568, -30)
+
+[node name="GroundSnow" type="Sprite2D" parent="Plats/StaticBody2D7"]
+texture = ExtResource("12_r8rrl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D7"]
+position = Vector2(2.5, 6)
+shape = SubResource("RectangleShape2D_lwvnx")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Plats"]
+position = Vector2(3606, -24)
+
+[node name="GroundWood" type="Sprite2D" parent="Plats/StaticBody2D6"]
+z_index = 1
+texture = ExtResource("16_lh3ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats/StaticBody2D6"]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_nauge")
+
+[node name="Sprite2D" type="Sprite2D" parent="Plats"]
+position = Vector2(154.5, -14)
+texture = ExtResource("13_r8rrl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plats"]
+position = Vector2(159.5, -7.5)
+shape = SubResource("RectangleShape2D_4ou0f")
+
+[node name="Fondo" type="StaticBody2D" parent="."]
+position = Vector2(5107, 246)
+
+[node name="BgLayer1" type="Sprite2D" parent="Fondo"]
+z_index = -5
+position = Vector2(-4506, -205)
+scale = Vector2(23.8467, 1)
+texture = ExtResource("17_nv8dg")
+
+[node name="BgLayer4" type="Sprite2D" parent="Fondo"]
+z_index = -5
+position = Vector2(-2045, 1)
+texture = ExtResource("18_wooj1")
+
+[node name="BgLayer3" type="Sprite2D" parent="Fondo"]
+z_index = -1
+position = Vector2(-4089, 6)
+texture = ExtResource("18_wooj1")
+
+[node name="BgLayer5" type="Sprite2D" parent="Fondo"]
+texture = ExtResource("18_wooj1")
