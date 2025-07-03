@@ -38,7 +38,7 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_usj0q")
 
 [node name="Jugador" parent="." instance=ExtResource("4_v8kj3")]
-position = Vector2(190, 227)
+position = Vector2(167, 227)
 
 [node name="PrimeraPlat" type="StaticBody2D" parent="."]
 position = Vector2(55, -31)
